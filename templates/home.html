@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %} HomePage {% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center mt-5">Welcome, {{ session['username'] }}!</h1>
+
+    <div class="mt-5">
+        <h2 class="text-center">Top 10 Rappers and Their Popular Songs</h2>
+        <ul class="list-group list-group-flush mx-auto" style="max-width: 600px;">
+            <li class="list-group-item">
+                <strong>Eminem:</strong> Lose Yourself, Stan, Rap God
+            </li>
+            <li class="list-group-item">
+                <strong>Jay-Z:</strong> Empire State of Mind, 99 Problems, Hard Knock Life
+            </li>
+            <li class="list-group-item">
+                <strong>Kendrick Lamar:</strong> HUMBLE., Swimming Pools, Alright
+            </li>
+            <li class="list-group-item">
+                <strong>Drake:</strong> Hotline Bling, God's Plan, In My Feelings
+            </li>
+            <li class="list-group-item">
+                <strong>Notorious B.I.G.:</strong> Juicy, Hypnotize, Big Poppa
+            </li>
+            <li class="list-group-item">
+                <strong>Tupac Shakur:</strong> California Love, Changes, Dear Mama
+            </li>
+            <li class="list-group-item">
+                <strong>Nas:</strong> NY State of Mind, The World is Yours, If I Ruled the World
+            </li>
+            <li class="list-group-item">
+                <strong>J. Cole:</strong> No Role Modelz, Middle Child, Work Out
+            </li>
+            <li class="list-group-item">
+                <strong>Lil Wayne:</strong> Lollipop, A Milli, 6 Foot 7 Foot
+            </li>
+            <li class="list-group-item">
+                <strong>Ice Cube:</strong> It Was a Good Day, Check Yo Self, Today Was a Good Day
+            </li>
+        </ul>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="{{ url_for('logout') }}" class="btn btn-primary">Logout</a>
+    </div>
+</div>
+{% endblock %}
